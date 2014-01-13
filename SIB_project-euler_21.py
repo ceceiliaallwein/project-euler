@@ -21,7 +21,7 @@ def proper_divisor(a):
     return output 
 
 
-def is_amicable(num1,num2):
+def is_amicable(num1):
     '''Returns True if two given
     integers are an amicable pair.'''
     sum1 = proper_divisor(num1)
@@ -40,12 +40,12 @@ def sum_amicable(n):
         # sums proper divisors of input value 
         y = proper_divisor(x)
         # evaluates if derived pair is amicable
-        if is_amicable (x,y) == True and x != y:
+        if is_amicable (x) == True and x != y:
             if y < n: 
                 # increments the output sum 
                 output = output + x
     return output
 
-# Prints the sum of amicable numbers under 10,000
+# prints the sum of amicable numbers under 10,000
 print sum_amicable(10000)
 
