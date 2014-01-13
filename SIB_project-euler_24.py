@@ -17,21 +17,20 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
 from itertools import permutations
 
 def make_list(x,y):
-	'''Creates a list from a given range.''' 
+	'''Creates a list from given range.''' 
 	output = range(x,y+1)
 	return output 
 
 def format(perm):
-	'''Converts permutation, i.e. a list 
-	of ints, into single int.''' 
+	'''Converts permutation, i.e. a 
+	list of ints, into single int.''' 
 	output = int(''.join(str(num) for num in perm))
 	return output
 
 
 def choose_permutation(x,y,n):
-	'''Generates n permutations from a list
-	of given range. Returns the n-th permutation. 
-	'''  
+	'''Generates n permutations from a list of a
+	given range. Returns the n-th permutation.'''  
 	# Generates tuple of permutations
 	x = [permutations(make_list(x,y),r=None) for perm in range(n)]
 	# Converts tuple to list and selects n-th permutation
@@ -41,7 +40,7 @@ def choose_permutation(x,y,n):
 	x = format(x)
 	return x
 
-# Prints the millionth lexocographical permutation of of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9
+# Prints the millionth lexocographical permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9
 print choose_permutation(0,9,1000000)
 
 
