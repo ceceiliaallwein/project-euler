@@ -1,4 +1,4 @@
 project-euler
 =============
 
-Solutions to math problems on ProjectEuler.net
+Correct algorithmic solutions to problems on ProjectEuler.net
