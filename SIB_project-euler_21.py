@@ -24,7 +24,6 @@ def proper_divisor(a):
 def is_amicable(num1,num2):
     '''Returns True if two given
     integers are an amicable pair.'''
-    output = 0
     sum1 = proper_divisor(num1)
     sum2 = proper_divisor(sum1)
     if num1 == sum2:
